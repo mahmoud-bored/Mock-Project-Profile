@@ -1,10 +1,12 @@
 *{
     padding: 0;margin: 0;box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     width: 100%;
     height: 200vh;
-    background-image: url("images/website-background.png");
     background-size: 100%;
     background-repeat: no-repeat;
     display: flex;
@@ -16,10 +18,41 @@ header{
     left: 0;
     width: 100%;
     height: fit-content;
-    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    height: 75px;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 4;
 }
 header > picture > img{
     width: 100%;
+}
+header > article{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    transform: translateY(-5vw) translateX(-30px);
+}
+header > article > h1{
+    font-size: 4vw;
+    /* margin-top: 40px; */
+    border-bottom: #6f2589 solid 0.3vw;
+    cursor: pointer;
+}
+header > article > h1 > a{
+    text-decoration: none;
+    color: #7b3f91;
+}
+header > article > img{
+    width: 19vw;
 }
 
 
